@@ -4,17 +4,6 @@ const path    = require('path'),
 module.exports = {
   context : path.resolve(__dirname, '.'),
   entry   : [
-    // activate HMR for React
-    'react-hot-loader/patch',
-
-    // bundle the client for webpack-dev-server
-    // and connect to the provided endpoint
-    'webpack-dev-server/client?http://localhost:8080',
-
-    // bundle the client for hot reloading
-    // only- means to only hot reload for successful updates
-    'webpack/hot/only-dev-server',
-
     // the entry point of our app
     './src/app/index.jsx'
   ],
@@ -26,13 +15,10 @@ module.exports = {
   devtool   : 'eval',
 
   devServer : {
-    // enable HMR on the server
-    hot: true,
-
     contentBase : path.resolve(__dirname, './src/app'),
 
-    // match the output `publicPath`
     publicPath: '/assets'
+    // match the output `publicPath`
   },
 
   resolve : {
@@ -58,13 +44,5 @@ module.exports = {
         'less-loader'
       ]
     }]
-  },
-
-  plugins : [
-    // enable HMR globally
-    new webpack.HotModuleReplacementPlugin(),
-
-    // prints more readable module names in the browser console on HMR updates
-    new webpack.NamedModulesPlugin()
-  ]
+  }
 };

@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "build": "webpack --config webpack.config.prod.js --optimize-minimize --define process.env.NODE_ENV=\"'production'\"",
     "start": "webpack-dev-server",
     "test": "jest",
     "stats": "webpack --config webpack.config.stats.js --json > dist/stats.json"
