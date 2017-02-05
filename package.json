@@ -1,0 +1,37 @@
+{
+  "name": "nicier",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "jest",
+    "stats": "webpack --config webpack.config.stats.js --json > dist/stats.json"
+  },
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-jest": "^18.0.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2016": "^6.22.0",
+    "babel-preset-stage-3": "^6.22.0",
+    "babylon": "^6.15.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.10",
+    "babel-preset-react": "^6.22.0",
+    "css-loader": "^0.26.1",
+    "jest": "^18.1.0",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
+    "react": "^15.4.2",
+    "react-codemirror": "^0.3.0",
+    "react-dom": "^15.4.2",
+    "react-hot-loader": "3.0.0-beta.6",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "style-loader": "^0.13.1",
+    "webpack": "2",
+    "webpack-dev-server": "2"
+  }
+}
