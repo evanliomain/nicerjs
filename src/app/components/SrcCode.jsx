@@ -4,6 +4,8 @@ import CodeMirror from 'react-codemirror';
 import 'codemirror/lib/codemirror.css';
 import './Code.less';
 
+import 'codemirror/mode/javascript/javascript';
+
 const SrcCode = ({ onChange, srcCode, error }) => (
   <div className="code">
     <span className="code-error">{ !error ? ' ' : error }</span>

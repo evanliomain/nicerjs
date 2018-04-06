@@ -34,7 +34,7 @@ export const format = (opts, level, instruction) => {
       return id.name
         + pad(id.name, maxVarName)
         + ' = '
-        + f(opts, level, init);
+        + f(opts, 0, init);
     });
 
   const [firstAff, ...othersAff] = affectations;
